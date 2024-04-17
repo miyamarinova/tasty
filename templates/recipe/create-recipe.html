@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main_content %}
+ <!-- create recipe form -->
+      <section id="create-page" class="auth">
+        <form id="create" method="post" action="{% url 'create recipe' %}">
+          {{ form.as_p }}
+            <input class="btn" type="submit" value="Create Recipe" />
+            {% csrf_token %}
+         
+        </form>
+      </section>
+
+{% endblock %}
